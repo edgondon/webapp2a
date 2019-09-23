@@ -17,16 +17,16 @@ function consoleResponse(responseJson) {
 }
 
 
-
-
 let data = [];
+
+
 
 function list() {
     console.log('hi list is working');
-
+    console.log(data.length);
     for (let i=0; i < data.length; i++) {
         $( ".picrs" ).append( `<img src="${data[i].message}" alt="random dog pic">` );
-        
+        console.log('ehllo');
         
     };
     console.log("inserted?");
