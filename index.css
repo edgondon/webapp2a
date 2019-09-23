@@ -1,0 +1,10 @@
+.picrs {
+    width: 100%;
+    display: flex;
+    height: auto;
+}
+
+img {
+    width: 50%;
+    height: auto;
+}
