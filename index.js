@@ -12,6 +12,8 @@ function getDogPic() {
 
 function consoleResponse(responseJson) {
     console.log(responseJson);
+    
+    
 }
 
 
@@ -20,7 +22,15 @@ function consoleResponse(responseJson) {
 let data = [];
 
 function list() {
-    console.log(data);
+    console.log('hi list is working');
+
+    if (selection < namer) {
+        data.push(responseJson.message);
+    }
+
+    else {
+        console.log(push);
+    };
 }
 
 function submitForm() {
@@ -38,7 +48,7 @@ function setSelect() {
     
     for (let selection = 0; selection < namer; selection++) {
         getDogPic();
-
+        
     }
     
     console.log(data);
@@ -52,5 +62,5 @@ function setSelect() {
 $(function() {
     console.log('Go ahead User Submit');
     submitForm();
-    list();
+    
 });
