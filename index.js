@@ -5,13 +5,23 @@ function getDogPic() {
         .then(response => response.json())
         .then(responseJson =>
             consoleResponse(responseJson))
+
         .catch(error => alert('not working'));
+    
 }
 
 function consoleResponse(responseJson) {
     console.log(responseJson);
 }
 
+
+
+
+let data = [];
+
+function list() {
+    console.log(data);
+}
 
 function submitForm() {
     $('form').submit(event => {
@@ -25,16 +35,22 @@ function submitForm() {
 function setSelect() {
     let namer = document.getElementById('myForm').value;
     console.log(namer);
+    
     for (let selection = 0; selection < namer; selection++) {
         getDogPic();
-    };
+
+    }
+    
+    console.log(data);
+
+ 
+   
 }
-
-
 
 
 
 $(function() {
     console.log('Go ahead User Submit');
     submitForm();
+    list();
 });
