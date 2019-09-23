@@ -25,9 +25,8 @@ function list() {
     console.log('hi list is working');
 
     for (let i=0; i < data.length; i++) {
-        $(".picrs").add(
-            `<img src="${data[i].message}" alt="random dog pic">`
-        )
+        $( ".picrs" ).append( `<img src="${data[i].message}" alt="random dog pic">` );
+        
         
     };
     console.log("inserted?");
