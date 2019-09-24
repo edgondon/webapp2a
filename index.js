@@ -26,7 +26,7 @@ let data = [];
 function submitForm() {
     $('form').submit(event => {
         event.preventDefault();
-        
+        $( ".picrs" ).html("");
         setSelect();
         
     });
