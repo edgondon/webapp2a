@@ -13,7 +13,7 @@ function getDogPic() {
 function consoleResponse(responseJson) {
     console.log(responseJson);
     data.push(responseJson);
-    
+    $( ".picrs" ).append( `<img src="${responseJson.message}" alt="random dog pic">` );
 }
 
 
@@ -21,24 +21,14 @@ let data = [];
 
 
 
-function list() {
-    console.log('hi list is working');
-    console.log(data.length);
-    for (let i=0; i < data.length; i++) {
-        $( ".picrs" ).append( `<img src="${data[i].message}" alt="random dog pic">` );
-        console.log('ehllo');
-        
-    };
-    console.log("inserted?");
 
-}
 
 function submitForm() {
     $('form').submit(event => {
         event.preventDefault();
         
         setSelect();
-        list();
+        
     });
 }
 
@@ -46,7 +36,7 @@ function submitForm() {
 function setSelect() {
     let namer = document.getElementById('myForm').value;
     console.log(namer);
-    
+    window.sllt = namer;
     for (let selection = 0; selection < namer; selection++) {
         getDogPic();
 
@@ -55,6 +45,7 @@ function setSelect() {
     }
     
     console.log(data);
+    
     
 
     
